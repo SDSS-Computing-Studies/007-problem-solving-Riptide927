@@ -67,16 +67,22 @@ def click():
     for x in range (10):
         upgrades()
         mangers()
-        if p.pixelMatchesColor(784, 400, (115,105,96)):
+        #lemon
+        if p.pixelMatchesColor(800, 382, (115,105,96)):
             p.click(740, 400)
-        if p.pixelMatchesColor(784, 493, (115,105,96)):
+        #News
+        if p.pixelMatchesColor(800, 4574, (115,105,96)):
             p.click(740, 500)
-        if p.pixelMatchesColor(784, 587, (115,105,96)):
+        #car
+        if p.pixelMatchesColor(800, 570, (115,105,96)):
             p.click(740, 600)
-        if p.pixelMatchesColor(784, 680, (115,105,96)):
+        #Pizza
+        if p.pixelMatchesColor(800, 666, (115,105,96)):
             p.click(740, 700)
+        #Donut
         if p.pixelMatchesColor(784, 775, (115,105,96)):
             p.click(740, 800)
+
         if p.pixelMatchesColor(1160, 400, (115,105,96)):
             p.click(1100, 400)
         if p.pixelMatchesColor(1160, 493, (115,105,96)):
@@ -87,12 +93,8 @@ def click():
             p.click(1100, 700)
         if p.pixelMatchesColor(1160, 775, (115,105,96)):
             p.click(1100, 800)
-def maxi():
-    for y in range(3):
-        p.click (1380,330)
 def main():
-    maxi()
     while True:
        click()
        buy()
-#main()
+main()
