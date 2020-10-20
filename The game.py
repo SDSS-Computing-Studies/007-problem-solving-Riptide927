@@ -5,20 +5,23 @@ import pyautogui as p
 
 p.mouseInfo()
 
-mang=0 
+
 def upgrades():
-    if p.pixelMatchesColor(469, 550, (224,136,74)):
+    if p.pixelMatchesColor(469, 550, (220,123,54))==True:
         p.click(469, 550)
         time.sleep(1)
         p.click (1170,700)
+        time.sleep(1)
+        p.moveTo (1380,330)
         p.click (1380,330)
 def mangers():
-    if p.pixelMatchesColor(464, 622, (224,136,74)):
+    if p.pixelMatchesColor(464, 622, (220,123,54))==True:
         p.click(464, 622)
         time.sleep(1)
         p.click (1160,600)
+        time.sleep(1)
+        p.moveTo (1380,330)
         p.click (1380,330)
-        mang + 1
 def buy():
     #Oil
     p.moveTo(1230,810)
@@ -61,31 +64,35 @@ def buy():
     if p.pixelMatchesColor(850, 430, (220,123,54)):
         p.click(850,430)
 def click():
-    if mang!=1:
-         p.click(740, 400)
-    if mang!=1 or 2:
-         p.click(740, 500)
-    if mang!=1 or 2 or 3:
-         p.click(740, 600)
-    if mang!=1 or 2 or 3 or 4:
-         p.click(740, 700)
-    if mang!=1 or 2 or 3 or 4 or 5:
-         p.click(740, 800)
-    if mang!=1 or 2 or 3 or 4 or 5 or 6:
-         p.click(1100, 400)
-    if mang!=1 or 2 or 3 or 4 or 5 or 6 or 7:
-         p.click(1100, 500)
-    if mang!=1 or 2 or 3 or 4 or 5 or 6 or 7 or 8:
-         p.click(1100, 600)
-    if mang!=1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
-         p.click(1100, 700)
-    if mang!=1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10:
-         p.click(1100, 800)
+    for x in range (10):
+        upgrades()
+        mangers()
+        if p.pixelMatchesColor(784, 400, (115,105,96)):
+            p.click(740, 400)
+        if p.pixelMatchesColor(784, 493, (115,105,96)):
+            p.click(740, 500)
+        if p.pixelMatchesColor(784, 587, (115,105,96)):
+            p.click(740, 600)
+        if p.pixelMatchesColor(784, 680, (115,105,96)):
+            p.click(740, 700)
+        if p.pixelMatchesColor(784, 775, (115,105,96)):
+            p.click(740, 800)
+        if p.pixelMatchesColor(1160, 400, (115,105,96)):
+            p.click(1100, 400)
+        if p.pixelMatchesColor(1160, 493, (115,105,96)):
+            p.click(1100, 500)
+        if p.pixelMatchesColor(1160, 587, (115,105,96)):
+            p.click(1100, 600)
+        if p.pixelMatchesColor(1160, 680, (115,105,96)):
+            p.click(1100, 700)
+        if p.pixelMatchesColor(1160, 775, (115,105,96)):
+            p.click(1100, 800)
+def maxi():
+    for y in range(3):
+        p.click (1380,330)
 def main():
+    maxi()
     while True:
-       upgrades()
-       mangers()
        click()
        buy()
-       time.sleep(60)
-main()
+#main()
