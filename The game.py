@@ -24,44 +24,45 @@ def mangers():
         p.click (1380,330)
 def buy():
     #Oil
-    p.moveTo(1230,810)
-    if p.pixelMatchesColor(1230, 810, (220,123,54)):
+    if p.pixelMatchesColor(1230, 810, (224,139,78)):
+        p.moveTo(1230,810)
         p.click(1230,810)
     #Bank
-    p.moveTo(1230,710)
-    if p.pixelMatchesColor(1230, 710, (220,123,54)):
+    if p.pixelMatchesColor(1230, 710, (224,139,78)):
+        p.moveTo(1230,710)
         p.click(1230,710)
     #Movie
-    p.moveTo(1230,610)
-    if p.pixelMatchesColor(1230, 610, (220,123,54)):
+    if p.pixelMatchesColor(1230, 610, (224,139,78)):
+        p.moveTo(1230,610)
         p.click(1230,610)
     #Hockey
-    p.moveTo(1230,530)
-    if p.pixelMatchesColor(1230, 530, (220,123,54)):
-        p.click(1230,430)
+    if p.pixelMatchesColor(1230, 525, (224,139,78)):
+        p.moveTo(1230,525)
+        p.click(1230,525)
     #Shrimp
-    p.moveTo(1230,430)
-    if p.pixelMatchesColor(1230, 430, (220,123,54)):
+    if p.pixelMatchesColor(1230, 430, (224,139,78)):
+        p.moveTo(1230,430)
         p.click(1230,430)
     #Donut
-    p.moveTo(850,810)
-    if p.pixelMatchesColor(850, 810, (220,123,54)):
+    if p.pixelMatchesColor(850, 810, (224,139,78)):
+        p.moveTo(850,810)
         p.click(850,810)
     #Pizza
-    p.moveTo(850,710)
-    if p.pixelMatchesColor(850, 710, (220,123,54)):
+    if p.pixelMatchesColor(850, 710, (224,139,78)):
+        p.moveTo(850,710)
         p.click(850,710)
     #Carwash
     p.moveTo(850,630)
-    if p.pixelMatchesColor(850, 630, (220,123,54)):
+    if p.pixelMatchesColor(850, 630, (224,139,78)):
+        p.moveTo(850,630)
         p.click(850,630)
     #NewsPaper
-    p.moveTo(850,530)
-    if p.pixelMatchesColor(850, 530, (220,123,54)):
+    if p.pixelMatchesColor(850, 530, (224,139,78)):
+        p.moveTo(850,530)
         p.click(850,530)
     #lemonstand
-    p.moveTo(850,430)
-    if p.pixelMatchesColor(850, 430, (220,123,54)):
+    if p.pixelMatchesColor(850, 430, (224,139,78)):
+        p.moveTo(850,430)
         p.click(850,430)
 def click():
     for x in range (10):
@@ -97,4 +98,5 @@ def main():
     while True:
        click()
        buy()
-main()
+#main()
+#buy()
