@@ -98,4 +98,4 @@ def main():
     while True:
        click()
        buy()
-buy()
+click()
