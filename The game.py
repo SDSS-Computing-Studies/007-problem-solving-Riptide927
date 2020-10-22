@@ -8,16 +8,20 @@ p.mouseInfo()
 
 def upgrades():
     if p.pixelMatchesColor(469, 550, (220,123,54))==True:
+        p.moveTo(469, 550)
         p.click(469, 550)
         time.sleep(0.5)
+        p.moveTo(1170,700)
         p.click (1170,700)
         time.sleep(0.5)
         p.moveTo (1380,330)
         p.click (1380,330)
 def mangers():
     if p.pixelMatchesColor(464, 622, (220,123,54))==True:
+        p.moveTo(464, 622)
         p.click(464, 622)
         time.sleep(0.5)
+        p.moveTo(1160,600)
         p.click (1160,600)
         time.sleep(0.5)
         p.moveTo (1380,330)
@@ -32,11 +36,11 @@ def buy():
         p.moveTo(1180,710)
         p.click(1180,710)
     #Movie
-    if p.pixelMatchesColor(1180, 610, (224,136,74)):
+    if p.pixelMatchesColor(1215, 623, (224,136,74)):
         p.moveTo(1180,610)
         p.click(1180,610)
     #Hockey
-    if p.pixelMatchesColor(1180, 540, (224,136,74)):
+    if p.pixelMatchesColor(1200, 530, (224,136,74)):
         p.moveTo(1230,525)
         p.click(1230,525)
     #Shrimp
@@ -65,37 +69,52 @@ def buy():
         p.click(815, 440)
 
 def click():
-    for x in range (10):
-        upgrades()
-        mangers()
-        #lemon
-        if p.pixelMatchesColor(800, 382, (115,105,96)):
-            p.click(740, 400)
-        #News
-        if p.pixelMatchesColor(800, 4574, (115,105,96)):
-            p.click(740, 500)
-        #car
-        if p.pixelMatchesColor(800, 570, (115,105,96)):
-            p.click(740, 600)
-        #Pizza
-        if p.pixelMatchesColor(800, 666, (115,105,96)):
-            p.click(740, 700)
-        #Donut
-        if p.pixelMatchesColor(784, 775, (115,105,96)):
-            p.click(740, 800)
-
-        if p.pixelMatchesColor(1160, 400, (115,105,96)):
-            p.click(1160, 400)
-        if p.pixelMatchesColor(1160, 493, (115,105,96)):
-            p.click(1160, 493)
-        if p.pixelMatchesColor(1160, 587, (115,105,96)):
-            p.click(1160, 587)
-        if p.pixelMatchesColor(1160, 680, (115,105,96)):
-            p.click(1160, 680)
-        if p.pixelMatchesColor(1160, 775, (115,105,96)):
-            p.click(1160, 775)
+    upgrades()
+    mangers()
+    #lemon
+    if p.pixelMatchesColor(800, 382, (115,105,96)):
+        p.moveTo(740, 400)
+        p.click(740, 400)
+    #News
+    if p.pixelMatchesColor(800, 474, (115,105,96)):
+        p.moveTo(740, 500)
+        p.click(740, 500)
+    #car
+    if p.pixelMatchesColor(800, 570, (115,105,96)):
+        p.moveTo(740, 600)        
+        p.click(740, 600)
+    #Pizza
+    if p.pixelMatchesColor(800, 666, (115,105,96)):
+        p.moveTo(740, 700)
+        p.click(740, 700)
+    #Donut
+    if p.pixelMatchesColor(793, 770, (115,105,96)):
+        p.moveTo(793, 770)
+        p.click(793, 770)
+    #Shrimp
+    if p.pixelMatchesColor(1170, 380, (115,105,96)):
+        p.moveTo(1170, 380)
+        p.click(1170, 380)
+    #Hockey
+    if p.pixelMatchesColor(1160, 493, (115,105,96)):
+        p.moveTo(1160, 493)
+        p.click(1160, 493)
+    #Movie
+    if p.pixelMatchesColor(1160, 587, (115,105,96)):
+        p.moveTo(1160, 587)
+        p.click(1160, 587)
+    #Bank
+    if p.pixelMatchesColor(1160, 680, (115,105,96)):
+        p.moveTo(1160, 680)
+        p.click(1160, 680)
+    #Oil
+    if p.pixelMatchesColor(1160, 775, (115,105,96)):
+        p.moveTo(1160, 775)
+        p.click(1160, 775)
+    
 def main():
     while True:
-       click()
-       buy()
-click()
+        click() 
+        buy()
+        time.sleep(15)
+main()
