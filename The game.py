@@ -26,7 +26,46 @@ def mangers():
         time.sleep(0.5)
         p.moveTo (1380,330)
         p.click (1380,330)
+def firstbuy():
+    #Oil
+    if p.pixelMatchesColor(1317, 782, (224,139,78)):
+        p.moveTo(1230,810)
+        p.click(1230,810)
+    #Bank
+    if p.pixelMatchesColor(1317, 692, (224,139,78)):
+        p.moveTo(1180,710)
+        p.click(1180,710)
+    #Movie
+    if p.pixelMatchesColor(1317, 596, (224,139,78)):
+        p.moveTo(1180,610)
+        p.click(1180,610)
+    #Hockey
+    if p.pixelMatchesColor(1317, 507, (224,139,78)):
+        p.moveTo(1230,525)
+        p.click(1230,525)
+    #Shrimp
+    if p.pixelMatchesColor(1317, 403, (224,139,78)):
+        p.moveTo(1230,430)
+        p.click(1230,430)
+    #Donut
+    if p.pixelMatchesColor(955, 779, (224,139,78)):
+        p.moveTo(850,810)
+        p.click(850,810)
+    #Pizza
+    if p.pixelMatchesColor(955, 680, (224,139,78)):
+        p.moveTo(850,710)
+        p.click(850,710)
+    #Carwash
+    if p.pixelMatchesColor(955, 574, (224,139,78)):
+        p.moveTo(850,630)
+        p.click(850,630)
+    #NewsPaper
+    if p.pixelMatchesColor(955, 475, (224,139,78)):
+        p.moveTo(850,530)
+        p.click(850,530)
+
 def buy():
+    firstbuy()
     #Oil
     if p.pixelMatchesColor(1230, 810, (224,136,74)):
         p.moveTo(1230,810)
@@ -116,5 +155,7 @@ def main():
     while True:
         click() 
         buy()
-        time.sleep(15)
+        for y in range (5):
+            click()
+            time.sleep(60)
 main()
